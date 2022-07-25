@@ -2,7 +2,7 @@
 title: "[Python] Global Variable, Local Variable"
 excerpt: ""
 categories:
-  - python
+  - Python
 tags:
   - global variable
   - local variable

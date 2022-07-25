@@ -2,7 +2,7 @@
 title: "[Python] Class - Practice"
 excerpt: ""
 categories:
-  - python
+  - Python
 tags:
   - class
   - inflearn
