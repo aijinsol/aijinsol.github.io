@@ -5,6 +5,7 @@ categories:
   - Python
 tags:
   - module
+  - inflearn
 last_modified_at: 2022-07-26
 ---
 
