@@ -4,7 +4,6 @@ excerpt: ""
 categories:
   - Python
 tags:
-
   - exception
   - inflearn
 last_modified_at: 2022-07-26
@@ -402,35 +401,35 @@ delicious!
 class MyError(Exception):
     pass
 
-def deserts(snacks):
+def desserts(snacks):
     if snacks == 'carrot':
         raise MyError()
     print(snacks)
 
-deserts('chocolate')  # chocolate
-deserts('carrot')     # __main__.MyError
+desserts('chocolate')  # chocolate
+desserts('carrot')     # __main__.MyError
 ```
 
 + 예외 처리 기법을 이용하여 MyError 발생을 예외 처리해 보자!
 
 ```python
 try:
-    deserts('chocolate')
-    deserts('carrot')
+    desserts('chocolate')
+    desserts('carrot')
 except MyError:
-    print('Not for my desert!!')
+    print('Not for my dessert!!')
 
 ------------------------------
 chocolate
-Not for my desert!!
+Not for my dessert!!
 ```
 
 + 오류 메시지를 출력하고 싶다면 아래와 같이 오류 변수 활용!
 
 ```python
 try:
-    deserts('chocolate')
-    deserts('carrot')
+    desserts('chocolate')
+    desserts('carrot')
 except MyError as e:
     print(e)
 ------------------------------
@@ -444,21 +443,21 @@ chocolate
 ```python
 class MyError(Exception):
     def __str__(self):
-        return 'Not for my desert!!'
+        return 'Not for my dessert!!'
 
-def deserts(snacks):
+def desserts(snacks):
     if snacks == 'carrot':
         raise MyError()
     print(snacks)
 
 try:
-    deserts('chocolate')
-    deserts('carrot')
+    desserts('chocolate')
+    desserts('carrot')
 except MyError as e:
     print(e)
 ------------------------------
 chocolate
-Not for my desert!!
+Not for my dessert!!
 ```
 
 <br>
