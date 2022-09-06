@@ -66,7 +66,7 @@ $ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/
 <b>(step2)</b> Set up shell environment for pyenv-virtualenv
 
 ```bash
-$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 ```
 
 <br>
@@ -83,9 +83,9 @@ $ pyenv versions --list
 
 ### Install desired Python version
 
- ```bash
- $ pypenv install <version>
- ```
+```bash
+$ pypenv install <version>
+```
 
 ### Switch between Python versions
 + 현재 shell session에서의 Python 버전 선택

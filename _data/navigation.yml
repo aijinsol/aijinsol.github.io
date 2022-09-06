@@ -29,6 +29,8 @@ extensions:
       - title: "Linear Algebra"
         url: /categories/linearalgebra/
       - title: "Algorithm"
-        url: /categories/algorithm/      
+        url: /categories/algorithm/
+      - title: "MAC"
+        url: /categories/mac/
       - title: "ETC"
         url: /categories/etc/
