@@ -16,15 +16,15 @@ minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "mljinsol Tech"
+title                    : "aijinsol Tech"
 title_separator          : "-"
 subtitle                 : "since 2022" # site tagline that appears below site title in masthead
-name                     : "mljinsol"
+name                     : "aijinsol"
 description              : "주니어 ML Engineer의 공부일기"
-url                      : "https://mljinsolkim.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://aijinsol.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-comments_repository      : "mljinsolkim/ghpages-comments"
+comments_repository      : "aijinsolkim/ghpages-comments"
 teaser                   : "/assets/images/profile_image2_revised.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -103,9 +103,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "mljinsol"
+  name             : "aijinsol"
   avatar           : "/assets/images/profile_image1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "ML Engineer"
+  bio              : "AI Engineer"
   location         : "Seoul, Korea"
   email            : 
   links:
@@ -123,7 +123,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/mljinsolkim"
+      url: "https://github.com/aijinsol"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
