@@ -149,7 +149,7 @@ Epoch 10/10
 
 <br>
 
-## 4) 위 과정 요약
+## 4) 요약
 
 + 위에서 짰던 모델은
     + 이미지의 픽셀데이터를 2차원의 28x28 행렬로 바꿔서,
@@ -201,6 +201,7 @@ Epoch 10/10
 
 # 3. CNN 모델을 활용한 이미지 데이터 분류
 
+## 1) Model
 ```python
 import tensorflow as tf
 import numpy as np
@@ -248,6 +249,10 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
+<br>
+
+## 2) Train
+
 ```python
 model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(trainX, trainY, validation_data=(testX, testY), epochs=5)
@@ -291,6 +296,12 @@ print(score)
 + Val_accuracy 높일 방법을 찾자!
     + Dense layer 추가?
     + Conv + Pooling layer 추가?
+
+<br>
+
+## 3) 결론
++ CNN을 활용한 모델을 만드니 accuracy가 올라갔다. (88% → 91%)
++ CNN 모델에서 Feature Extraction(`Convolutional layer + Pooling layer`)을 통해 이미지의 특징을 추출해서 가운데로 모으는 역할이 이미지 데이터를 활용하는 모델의 성능에 큰 역할을 한다는 것을 알 수 있다.
 
 <br>
 
