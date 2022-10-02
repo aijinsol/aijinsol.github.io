@@ -1,5 +1,5 @@
 ---
-title: "[DL] Image Classification DL 모델 만들기"
+title: "[DL] Image Classification DL 모델 만들기 1"
 excerpt: "의류 이미지 구분 DL 프로젝트"
 categories:
  - DeepLearning
@@ -12,6 +12,64 @@ last_modified_at: 2022-09-29
 > Image Classification 문제에서 왜 CNN이 필요한지 알아보자.
 
 | 의류 이미지 구분 DL 프로젝트
+
+전체코드 - without CNN
+```python
+import tensorflow as tf
+
+
+# Download dataset
+(trainX, trainY), (testX, textY) = tf.keras.datasets.fashion_mnist.load_data()
+
+# Model
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(128, input_shape=(28,28), activation='relu'),
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+
+model.summary()
+
+# Train
+model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(trainX, trainY, epochs=10)
+```
+
+전체코드 - with CNN
+```python
+import tensorflow as tf
+
+
+# Pre-processing
+(trainX, trainY), (testX, testY) = tf.keras.datasets.fashion_mnist.load_data()
+
+trainX = trainX / 255.0
+testX = testX / 255.0
+
+trainX = trainX.reshape( ( trainX.shape[0], 28, 28, 1 ))
+testX = testX.reshape( ( testX.shape[0], 28, 28, 1 ))
+
+# Model
+model = tf.keras.Sequential([
+    tf.keras.layers.Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(28,28,1)),
+    tf.keras.layers.MaxPooling2D( (2, 2) ),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+
+model.summary()
+
+# Train
+model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.fit(trainX, trainY, validation_data=(testX, testY), epochs=5)
+
+# Predict
+# score = model.evaluate(testX, testY)
+```
+
+<br>
 
 # 1. 이미지 데이터를 그냥 딥러닝 돌려보면?(CNN 사용X)
 
@@ -204,7 +262,7 @@ Epoch 10/10
 ## 1) Model
 ```python
 import tensorflow as tf
-import numpy as np
+
 
 (trainX, trainY), (testX, testY) = tf.keras.datasets.fashion_mnist.load_data()  # numpy.ndarray
 

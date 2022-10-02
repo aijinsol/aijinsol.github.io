@@ -1,18 +1,20 @@
 ---
-title: "[DL] Image Classification DL 모델 만들기 - 개 vs 고양이 구분"
-excerpt: "(Kaggle) 개 고양이 구분 DL 프로젝트"
+title: "[DL] Image Classification DL 모델 만들기 2"
+excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트"
 categories:
  - DeepLearning
 tags:
   - keras
   - codding apple
-last_modified_at: 2022-09-29
+last_modified_at: 2022-09-30
 ---
 
 > Kaggle 프로젝트의 실전 데이터로 프로젝트 진행해보기 <br>
 > [Kaggle: Dogs vs. Cats Redux: Kernels Edition](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition)
 
 | 개 고양이 구분 DL 프로젝트
+
+전체코드
 
 ```python
 import os
