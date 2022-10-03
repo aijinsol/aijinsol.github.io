@@ -14,8 +14,7 @@ last_modified_at: 2022-09-30
 
 | 개 고양이 구분 DL 프로젝트
 
-전체코드
-
+# Code
 ```python
 import os
 import shutil
@@ -40,7 +39,7 @@ for i in os.listdir('./train/'):
     if 'dog' in i:
         shutil.copyfile('./train/' + i, './dataset/dog/' + i)
 
-# Pre-processing
+# Pre-process
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
     './dataset/',
     image_size=(64,64),
@@ -83,6 +82,7 @@ model = tf.keras.Sequential([
 
 model.summary()
 
+# Train
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(train_ds, validation_data=val_ds, epochs=5)
 ```
@@ -124,7 +124,6 @@ print(len(os.listdir('./train/')))
 ## 1) Dataset
 
 dataset 폴더 만들기
-
 ```python
 os.mkdir('./dataset')
 os.mkdir('./dataset/cat')
@@ -147,7 +146,6 @@ for i in os.listdir('./train/'): # 파일명 (ex. cat.5077.jpg)
 ## 2) Image to Tensor
 
 이미지 숫자로 변환하기
-
 ```python
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
     './dataset/',

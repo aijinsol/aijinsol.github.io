@@ -13,7 +13,9 @@ last_modified_at: 2022-09-29
 
 | 의류 이미지 구분 DL 프로젝트
 
-전체코드 - without CNN
+# Code
+## without CNN
+
 ```python
 import tensorflow as tf
 
@@ -36,7 +38,7 @@ model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=
 model.fit(trainX, trainY, epochs=10)
 ```
 
-전체코드 - with CNN
+## with CNN
 ```python
 import tensorflow as tf
 
