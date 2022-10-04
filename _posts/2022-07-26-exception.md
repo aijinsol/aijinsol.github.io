@@ -194,7 +194,7 @@ print(y + z)  # TypeError: can only concatenate tuple (not "str") to tuple
 
 # 2. 오류 처리
 + `try`: 에러가 발생할 가능성이 있는 코드 실행
-+ `except ${Error} [as ${Error Variable}]`
++ `except [${Error} [as ${Error Variable}]]`
 + `else`: try 블록의 에러가 없을 경우 실행
 + `finally`: 항상 실행
 

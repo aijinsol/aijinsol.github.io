@@ -19,10 +19,10 @@ last_modified_at: 2022-10-04
 # (방법 1) 모델에 넣기 직전 이미지 증강
 
 ```python
-tf.keras.layers.experimental.preprocessing.{CLASSES}
+tf.keras.layers.experimental.preprocessing.${CLASSES}
 ```
 + 최근에 새로 나온 방식으로 보통 이 모듈을 활용한 방식으로 augmentation을 많이 진행한다.
-+ `{CLASSES}`에 들어갈 다양한 전처리 classes는 [Tensorflow 소개 페이지(Tensorflow - Module:tf.keras.layers.experimental.preprocessing)](https://www.tensorflow.org/api_docs/python/tf/keras/layers/experimental/preprocessing)에서 확인할 수 있다.
++ `${CLASSES}`에 들어갈 다양한 전처리 classes는 [Tensorflow 소개 페이지(Tensorflow - Module:tf.keras.layers.experimental.preprocessing)](https://www.tensorflow.org/api_docs/python/tf/keras/layers/experimental/preprocessing)에서 확인할 수 있다.
 
 Example)
 ```python
