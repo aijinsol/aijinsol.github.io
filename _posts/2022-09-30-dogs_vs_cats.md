@@ -4,7 +4,7 @@ excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트"
 categories:
  - DeepLearning
 tags:
-  - keras
+  - tensorflow
   - codding apple
 last_modified_at: 2022-09-30
 ---

@@ -4,7 +4,7 @@ excerpt: "의류 이미지 구분 DL 프로젝트"
 categories:
  - DeepLearning
 tags:
-  - keras
+  - tensorflow
   - codding apple
 last_modified_at: 2022-10-03
 ---
@@ -68,7 +68,7 @@ model.fit(trainX, trainY, validation_data=(testX, testY), epochs=3, callbacks=[c
 Example)
 ```python
 import tensorflow as tf
-import numpy as np
+
 
 (trainX, trainY), (testX, testY) = tf.keras.datasets.fashion_mnist.load_data()
 

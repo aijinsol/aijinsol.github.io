@@ -4,7 +4,7 @@ excerpt: "의류 이미지 구분 DL 프로젝트"
 categories:
  - DeepLearning
 tags:
-  - keras
+  - tensorflow
   - codding apple
 last_modified_at: 2022-09-29
 ---
