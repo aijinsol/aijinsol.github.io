@@ -5,7 +5,7 @@ categories:
  - DeepLearning
 tags:
   - tensorflow
-  - codding apple
+  - coding apple
 last_modified_at: 2022-09-29
 ---
 
