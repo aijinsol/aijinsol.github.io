@@ -5,9 +5,9 @@ categories:
  - DeepLearning
 tags:
   - tensorflow
-  - transferlearning
+  - transfer learning
   - coding apple
-last_modified_at: 2022-10-07
+last_modified_at: 2022-10-08
 ---
 
 > 전이학습을 이용해서 내 모델의 성능을 올려보자.
@@ -45,7 +45,7 @@ for i in os.listdir('/content/train/'):
 
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
   '/content/dataset/',
-  image_size=(150,150),
+  image_size=(150,150),  # 이미지 전처리시 input_shape과 동일하게 150x150으로 설정
   batch_size=64,
   subset='training',
   validation_split=0.2,
@@ -54,7 +54,7 @@ train_ds = tf.keras.preprocessing.image_dataset_from_directory(
 
 val_ds = tf.keras.preprocessing.image_dataset_from_directory(
   '/content/dataset/',
-  image_size=(150,150), # 이미지 전처리시 input_shape과 동일하게 150x150으로 해야함
+  image_size=(150,150),
   batch_size=64,
   subset='validation',
   validation_split=0.2,
