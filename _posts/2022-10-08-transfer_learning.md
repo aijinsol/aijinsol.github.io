@@ -1,6 +1,6 @@
 ---
 title: "[DL] Transfer Learning (전이학습)"
-excerpt: "의류 이미지 구분 DL 프로젝트"
+excerpt: "(Kaggle) 개 고양이 구분 DL 프로젝트"
 categories:
  - DeepLearning
 tags:
