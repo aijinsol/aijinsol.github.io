@@ -1,6 +1,6 @@
 ---
 title: "[DL/CV/PRJ] model/checkpoint 저장하기"
-excerpt: "의류 이미지 구분 DL 프로젝트 #2"
+excerpt: "의류 이미지 구분 DL 프로젝트 #2 - 모델 저장/로드"
 categories:
   - DeepLearning
   - ComputerVision

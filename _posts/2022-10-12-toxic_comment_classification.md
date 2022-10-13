@@ -1,6 +1,6 @@
 ---
 title: "[DL/NLP/PRJ] 댓글 검열 AI 만들기"
-excerpt: ""
+excerpt: "악플 vs. 선플"
 categories:
   - DeepLearning
   - NLP

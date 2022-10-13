@@ -1,6 +1,6 @@
 ---
 title: "[DL/CV/PRJ] Image Augmentation"
-excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트 #2"
+excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트 #2 - 이미지 증강"
 categories:
   - DeepLearning
   - ComputerVision
