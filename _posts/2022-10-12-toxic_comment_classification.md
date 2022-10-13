@@ -6,6 +6,7 @@ categories:
   - NLP
   - Project
 tags:
+  - tensorflow
   - sequence
   - coding apple
 last_modified_at: 2022-10-12
