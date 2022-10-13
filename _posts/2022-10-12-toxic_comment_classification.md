@@ -1,10 +1,12 @@
 ---
-title: "[DL] 댓글 검열 AI 만들기"
+title: "[DL/NLP/PRJ] 댓글 검열 AI 만들기"
 excerpt: ""
 categories:
- - DeepLearning
+  - DeepLearning
+  - NLP
+  - Project
 tags:
-  - korean preprocessing
+  - sequence
   - coding apple
 last_modified_at: 2022-10-12
 ---

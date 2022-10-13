@@ -1,8 +1,9 @@
 ---
-title: "[OpenCV] 이미지 슬라이드쇼 만들기"
-excerpt: ""
+title: "[CV/PRJ] 이미지 슬라이드쇼 만들기"
+excerpt: "OpenCV"
 categories:
- - ComputerVision
+  - ComputerVision
+  - Project
 tags:
 last_modified_at: 2022-10-09
 ---

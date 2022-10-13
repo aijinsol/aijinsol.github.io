@@ -1,8 +1,10 @@
 ---
-title: "[DL] Image Classification DL 모델 만들기 2"
-excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트"
+title: "[DL/CV/PRJ] Image Classification DL 모델 만들기 2"
+excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트 #1 - CNN"
 categories:
- - DeepLearning
+  - DeepLearning
+  - ComputerVision
+  - Project
 tags:
   - tensorflow
   - coding apple

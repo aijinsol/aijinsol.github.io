@@ -24,6 +24,8 @@ extensions:
         url: /categories/computervision
       - title: "Natural Language Processing"
         url: /categories/nlp/
+      - title: "Project"
+        url: /categories/project
       - title: "Git"
         url: /categories/git/
       - title: "Linear Algebra"

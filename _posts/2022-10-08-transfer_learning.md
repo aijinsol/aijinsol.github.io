@@ -1,8 +1,10 @@
 ---
-title: "[DL] Transfer Learning (전이학습)"
-excerpt: "(Kaggle) 개 고양이 구분 DL 프로젝트"
+title: "[DL/CV/PRJ] Transfer Learning (전이학습)"
+excerpt: "(Kaggle) 개 고양이 구분 DL 프로젝트 #3 - "
 categories:
- - DeepLearning
+  - DeepLearning
+  - ComputerVision
+  - Project
 tags:
   - tensorflow
   - transfer learning

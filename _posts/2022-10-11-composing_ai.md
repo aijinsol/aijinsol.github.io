@@ -1,8 +1,9 @@
 ---
-title: "[DL] 작곡하는 AI 만들기"
-excerpt: ""
+title: "[DL/PRJ] 작곡하는 AI 만들기"
+excerpt: "음표 학습 (ABC Notation)"
 categories:
- - DeepLearning
+  - DeepLearning
+  - Project
 tags:
   - sequence
   - coding apple

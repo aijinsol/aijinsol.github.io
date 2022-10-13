@@ -1,8 +1,10 @@
 ---
-title: "[DL] Image Classification DL 모델 만들기 1"
-excerpt: "의류 이미지 구분 DL 프로젝트"
+title: "[DL/CV/PRJ] Image Classification DL 모델 만들기 1"
+excerpt: "의류 이미지 구분 DL 프로젝트 #1 - CNN"
 categories:
- - DeepLearning
+  - DeepLearning
+  - ComputerVision
+  - Project
 tags:
   - tensorflow
   - coding apple

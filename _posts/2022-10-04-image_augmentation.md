@@ -1,8 +1,10 @@
 ---
-title: "[DL] Image Augmentation"
-excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트"
+title: "[DL/CV/PRJ] Image Augmentation"
+excerpt: "(Kaggle) 개 vs 고양이 구분 DL 프로젝트 #2"
 categories:
- - DeepLearning
+  - DeepLearning
+  - ComputerVision
+  - Project
 tags:
   - tensorflow
   - coding apple

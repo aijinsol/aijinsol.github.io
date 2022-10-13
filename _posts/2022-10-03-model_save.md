@@ -1,8 +1,10 @@
 ---
-title: "[DL] model/checkpoint 저장하기"
-excerpt: "의류 이미지 구분 DL 프로젝트"
+title: "[DL/CV/PRJ] model/checkpoint 저장하기"
+excerpt: "의류 이미지 구분 DL 프로젝트 #2"
 categories:
- - DeepLearning
+  - DeepLearning
+  - ComputerVision
+  - Project
 tags:
   - tensorflow
   - coding apple

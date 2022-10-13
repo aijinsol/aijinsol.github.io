@@ -1,8 +1,10 @@
 ---
-title: "[DL] Tensorboard & Early Stopping"
-excerpt: "의류 이미지 구분 DL 프로젝트 - 실험 자동화"
+title: "[DL/CV/PRJ] Tensorboard & Early Stopping"
+excerpt: "의류 이미지 구분 DL 프로젝트 #3 - 실험 자동화"
 categories:
- - DeepLearning
+  - DeepLearning
+  - ComputerVision
+  - Project
 tags:
   - tensorflow
   - tensorboard

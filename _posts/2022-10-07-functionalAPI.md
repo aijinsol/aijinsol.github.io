@@ -1,8 +1,10 @@
 ---
-title: "[DL] Sequential이 아닌 Functional API로 모델 만들기"
-excerpt: "의류 이미지 구분 DL 프로젝트"
+title: "[DL/CV/PRJ] Sequential이 아닌 Functional API로 모델 만들기"
+excerpt: "의류 이미지 구분 DL 프로젝트 #4 - Functional API"
 categories:
- - DeepLearning
+  - DeepLearning
+  - ComputerVision
+  - Project
 tags:
   - tensorflow
   - functionalAPI
