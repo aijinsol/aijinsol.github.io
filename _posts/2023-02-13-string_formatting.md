@@ -1,5 +1,5 @@
 ---
-title: "[Python] Python String"
+title: "[Python] String Formatting"
 excerpt: "문자열 formatting"
 categories:
   - Python
@@ -193,11 +193,14 @@ print("{0:10.4f}".format(x))
 
 ### (3) f 문자열 formatting에서 딕셔너리의 사용
 + 딕셔너리를 사용하여 f 문자열 formatting 표현하기도 가능!
+    + `'`와 `"`의 사용 유의하자! 동시에 쓰지 않도록!!
     
     ```python
     d = {'name': 'Jinsol Kim', 'age': 100}
-    print('My name is {d['name']}, and I am {d['age']} years old.')
+    print(f'My name is {d["name"]}, and I am {d["age"]} years old.')
+    print(f"My name is {d['name']}, and I am {d['age']} years old.")
     --------------------------------------------------
+    'My name is Jinsol Kim, and I am 100 years old.'
     'My name is Jinsol Kim, and I am 100 years old.'
     ```
 <br>
@@ -234,3 +237,10 @@ print(f'{x:10.4f}')
 --------------------------------------------------
 '    3.1416'
 ```
+
+<br>
+
+# Reference
++ [점프 투 파이썬 - 문자열 자료형](https://wikidocs.net/13)
+
+<br>
