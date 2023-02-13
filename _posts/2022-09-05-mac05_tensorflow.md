@@ -5,7 +5,7 @@ categories:
  - MAC
 tags:
   - tensorflow
-last_modified_at: 2022-09-06
+last_modified_at: 2022-09-05
 ---
 
 # 1. Conda를 이용한 가상환경 구축
