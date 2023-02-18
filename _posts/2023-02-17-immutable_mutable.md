@@ -45,7 +45,7 @@ id(c): 		 4348906832
 ```
 + Immutable한 객체는 값이 같은 경우, 변수에 상관없이 동일한 주소를 참조한다.
 
-![image01](/assets/images//2023-02-17-immutable_mutable_01.jpg){: .align-center}{: width="40%" height="40%"}
+![image01](/assets/images/2023-02-17-immutable_mutable_01.jpg){: .align-center}{: width="40%" height="40%"}
 
 <br>
 
@@ -54,13 +54,14 @@ c += 1
 
 print('new c: \t\t', c)
 print('id(c): \t\t', id(c))
+
 --------------------------------------------------
 new c: 		 101
 id(c): 		 4348906864
 ```
 + Immutable한 객체는 값이 다른 경우, 새로운 주소에 객체를 생성하여 참조하게 된다.
 
-![image02](/assets/images//2023-02-17-immutable_mutable_02.jpg){: .align-center}{: width="40%" height="40%"}
+![image02](/assets/images/2023-02-17-immutable_mutable_02.jpg){: .align-center}{: width="40%" height="40%"}
 
 <br>
 
@@ -74,6 +75,7 @@ f = [1, 2, 3]
 print('id(d): \t\t', id(d))
 print('id(e): \t\t', id(e))
 print('id(f): \t\t', id(f))
+
 --------------------------------------------------
 id(d): 		 4669765312
 id(e): 		 4669522240
@@ -81,7 +83,7 @@ id(f): 		 4425056128
 ```
 + Mutable한 객체는 값이 같은 경우에도 모든 객체를 각각 생성해서 참조한다.
 
-![image03](/assets/images//2023-02-17-immutable_mutable_03.jpg){: .align-center}{: width="40%" height="40%"}
+![image03](/assets/images/2023-02-17-immutable_mutable_03.jpg){: .align-center}{: width="40%" height="40%"}
 
 <br>
 
@@ -90,6 +92,7 @@ f.append(4)
 
 print('new f: \t\t', f)
 print('id(f): \t\t', id(f))
+
 --------------------------------------------------
 new f: 		 [1, 2, 3, 4]
 id(f): 		 4425056128
@@ -110,6 +113,7 @@ print('id(g): \t\t', id(g))
 print('id(h): \t\t', id(h))
 print('id(h[0]): \t', id(h[0]))
 print('id(h[1]): \t', id(h[1]))
+
 --------------------------------------------------
 id(g): 		 4426431088
 id(h): 		 4669503552
@@ -118,17 +122,18 @@ id(h[1]):  4369162480
 ```
 + `g` 변수가 바인딩하는 문자열 객체 `hello`와 h 리스트의 `[0]`번째 원소가 바인딩하는 문자열 `hello`는 동일한 객체! 주소 값을 확인해보면 두 같은 객체임을 알 수 있다.
 
-![image05](/assets/images//2023-02-17-immutable_mutable_05.jpg){: .align-center}{: width="40%" height="40%"}
+![image05](/assets/images/2023-02-17-immutable_mutable_05.jpg){: .align-center}{: width="40%" height="40%"}
 
 <br>
 
-## Example 4) Mutable 및 immutable 객체 변경
+## Example 4) Immutable 및 mutable 객체 변경
 
-Mutable 객체를 변경한다면?
+Immutable 객체를 변경한다면?
 
 ```python
 i = 'apple'
 print('id(i): \t\t', id(i))
+
 --------------------------------------------------
 id(i): 		 4574351536
 ```
@@ -136,6 +141,7 @@ id(i): 		 4574351536
 ```python
 i = 'pineapple'
 print('id(i): \t\t', id(i))
+
 --------------------------------------------------
 id(i): 		 4578009072
 ```
@@ -148,7 +154,7 @@ id(i): 		 4578009072
 
 <br>
 
-Immutable 객체를 변경한다면?
+Mutable 객체를 변경한다면?
 
 ```python
 j = ['apple', 'pineapple']
@@ -160,6 +166,7 @@ print('id(j): \t\t', id(j))
 print('id(j[0]): \t', id(j[0]))
 print('id(j[1]): \t', id(j[1]))
 print('id(j[2]): \t', id(j[2]))
+
 --------------------------------------------------
 id(j): 		 4425040256
 new j: 		 ['apple', 'pineapple', 'orange']
@@ -168,7 +175,7 @@ id(j[0]):  4574351536
 id(j[1]):  4578009072
 id(j[2]):  4573311920
 ```
-+ `j`라는 변수는 리스트 객체를 바인딩한다. 리스트는 immutable 객체로 리스트에 값을 추가해도 리스트 객체의 주소 값은 변하지 않고 동일하다.
++ `j`라는 변수는 리스트 객체를 바인딩한다. 리스트는 mutable 객체로 리스트에 값을 추가해도 리스트 객체의 주소 값은 변하지 않고 동일하다.
 + 리스트 객체는 `[0]`번째, `[1]`번째, `[2]`번째 리스트 원소인 문자열 객체를 다시 바인딩하는 구조를 이룬다. 따라서 리스트에 새로운 원소를 추가하거나 삭제해도 리스트 객체의 주소 값이 변하지 않고 동일한 것이다.
 
 ![image06](/assets/images/2023-02-17-immutable_mutable_06.jpg){: .align-center}{: width="40%" height="40%"}
