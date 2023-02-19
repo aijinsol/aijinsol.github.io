@@ -9,6 +9,8 @@ tags:
 last_modified_at: 2023-02-17
 ---
 
+> <b>"파이썬은 객체로 동작한다!"</b>는 사실을 명심하고 아래 내용을 접근하자.
+
 # 1. Immutable vs. Mutable
 
 파이썬의 객체(object)는 그 속성이 immutable 또는 mutable한 객체로 구분된다.
