@@ -6,6 +6,8 @@ categories:
 tags:
   - global
   - local
+  - error
+  - shadowing
 last_modified_at: 2023-02-19
 ---
 
