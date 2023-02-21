@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aijinsol.github.io/sitemap.xml
