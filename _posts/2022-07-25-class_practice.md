@@ -56,7 +56,7 @@ class Dog:                  # object 상속
     + `class Dog()`
     + `class Dog`
 + `__init__`
-    + 모든 class가 초기화될 떄 반드시 호출되는 함수
+    + 모든 class가 초기화될 때 반드시 호출되는 함수
     + 즉, 모든 class는 초기화 메소드를 갖는다
 
 <br>
@@ -65,7 +65,7 @@ class Dog:                  # object 상속
 ```python 
 print(Dog)
 ```
-```python
+```
 --------------------------------------------------
 <class '__main__.Dog'>
 ```
@@ -84,7 +84,7 @@ print(a == b, id(a), id(b), id(c))
 ```
 false 4409673088 4409672992 4409672848
 ```
-+ 인스턴스 `a`와 인스턴스 `b`의 경우, 내용이 같아도 인스턴스끼리는 서로 다른 인스턴스!
++ 인스턴스 `a`와 인스턴스 `c`의 경우, 내용이 같아도 인스턴스끼리는 서로 다른 인스턴스!
     + 즉, 인스턴스화시킨 것은 서로 모두 다른 인스턴스!
 
 <br>
@@ -100,7 +100,7 @@ dog1 {'name': 'Mickey', 'age': 2}
 dog2 {'name': 'Minnie', 'age': 3}
 ```
 + `namespace`: 객체를 인스턴스화할 때 자신만의 저장된 공간
-    + `인스턴스변수.__dict__` 이용하여 `namespace`에 접근 가능
+    + `{인스턴스변수}.__dict__` 이용하여 `namespace`에 접근 가능
     + class가 갖고 있는 attribute 확인 가능
     + dictionary 형태로 가져다 쓸 수 있게끔 출력된다.
 
@@ -139,7 +139,6 @@ maltese
 
 ```python
 class  SelfTest:
-
     # 클래스 메소드
     def func1():
         print('Func1 called')
@@ -152,10 +151,10 @@ class  SelfTest:
 + 위 예시 코드에서 `__init__` 메소드가 없다!
     + 이렇게 `__init__` 메소드가 없는 경우, 파이썬이 내부적으로 알아서 실행해준다.
     + 위 코드에서는 전 예시의 `name`이나 `age`같은 속성이 필요없고 기본 클래스로 사용하기 위해 만들어주지 않은 것.
-+ 클래스 메소드
++ `클래스 메소드`
     + 매개변수가 없기 때문에 클래스로 직접 호출한다
     + ex) `SelfTest.func1()`
-+ 인스턴스 메소드
++ `인스턴스 메소드`
     + `self`가 붙은 것은 인스턴스 메소드! 인스턴스를 넘겨주거나 인스턴스로 호출해야 한다
     + ex) `f.func2()` or `SelfTest.func2(f)`
 
@@ -173,11 +172,11 @@ print(id(f))
 ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'func1', 'func2']
 4343498496
 ```
-+ `dir(f)` 출력시 맨 끝에 내가 만들어준 메소드인 `func1`, `func2`가 잘 들어가 있다!
++ `dir(f)` 출력시 맨 끝에 내가 만들어준 메소드인 `func1()`, `func2()`가 잘 들어가 있다!
 
 <br>
 
-`func1`, `func2`를 호출해보자.
+`func1()`, `func2()`를 호출해보자.
 
 ```python
 f.func1()
@@ -224,7 +223,7 @@ Func2 called
 
 <br>
 
-그럼 func1()은 어떻게 호출해야 할까? → 클래스로 바로 접근!
+그럼 `func1()`은 어떻게 호출해야 할까? → 클래스로 바로 접근!
 
 ```python
 SelfTest.func1()
@@ -322,8 +321,8 @@ Lee
 {'__module__': '__main__', 'stock_num': 2, '__init__': <function Warehouse.__init__ at 0x1069ad0d0>, '__del__': <function Warehouse.__del__ at 0x1069ad160>, '__dict__': <attribute '__dict__' of 'Warehouse' objects>, '__weakref__': <attribute '__weakref__' of 'Warehouse' objects>, '__doc__': None}
 ```
 + `'stock_num': 2`로 바뀌어있는 것을 확인할 수 있다
-+ `stock_num`은 모두와 공유한다는데 왜 `print(user1.name)`할 때는 `'stock_num': 2`가 나오지 않을까?
-+ 그런데 아래와 같이 `user1.stock_num`을 출력해보면 2라고 답이 잘 나온다. `stock_num` 정보가 잘 저장되어 있는 것
++ `stock_num`은 모두와 공유한다는데 왜 `print(user1.__dict__)` 또는 `print(user2.__dict__)` 할 때는 `'stock_num': 2`가 나오지 않을까?
++ 그런데 아래와 같이 `user1.stock_num`와 `user2.stock_num`을 출력해보면 2라고 답이 잘 나온다. `stock_num` 정보가 잘 저장되어 있는 것
 
 <br>
 
@@ -375,6 +374,7 @@ del user1
 print('after delete user1:', Warehouse.__dict__)
 ```
 ```
+--------------------------------------------------
 after delete user1: {'__module__': '__main__', 'stock_num': 49, '__init__': <function Warehouse.__init__ at 0x104c0e430>, '__del__': <function Warehouse.__del__ at 0x104c0e4c0>, '__dict__': <attribute '__dict__' of 'Warehouse' objects>, '__weakref__': <attribute '__weakref__' of 'Warehouse' objects>, '__doc__': None}
 ```
 + `'stock_num': 49`로 바뀌어있는 것을 확인할 수 있다
@@ -394,8 +394,8 @@ class Dog:
     def info(self):
         return '{} is {} years old'.format(self.name, self.age)
 
-    def speak(self, sound):
-        return "{} cries {}!".format(self.name, sound)
+    def bark(self, sound):
+        return "{} barks {}!".format(self.name, sound)
 
 # 인스턴스 생성
 c = Dog('July', 4)
@@ -404,15 +404,15 @@ d = Dog('May', 10)
 # 메소드 호출
 print(c.info())
 print(d.info())
-print(c.speak('Woof Woof'))
-print(d.speak('Ouch!'))
+print(c.bark('Woof Woof'))
+print(d.bark('Woof!'))
 ```
 ```
 --------------------------------------------------
 July is 4 years old
 May is 10 years old
-July cries Woof Woof!
-May cries Ouch!
+July barks Woof Woof
+May barks Woof!
 ```
 
 <br>
