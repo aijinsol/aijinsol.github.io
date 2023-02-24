@@ -36,7 +36,7 @@ last_modified_at: 2023-02-19
 
 <br>
 
-# 3. 예시로 이해하자!
+# 4. 예시로 이해하자!
 
 ## Example 1) Global Variable
 
@@ -222,4 +222,4 @@ local variable
 # Reference
 
 + [긴기린그림과 데이터 - UnboundLocalError](https://gin-girin-grim.tistory.com/2)
-+ [shoot for th moon! - Scope](https://velog.io/@mjhuh263/TIL-45-Python-Scope)
++ [shoot for the moon! - Scope](https://velog.io/@mjhuh263/TIL-45-Python-Scope)
