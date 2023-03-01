@@ -30,8 +30,8 @@ extensions:
         url: /categories/git/
       - title: "Linear Algebra"
         url: /categories/linearalgebra/
-      - title: "Algorithm"
-        url: /categories/algorithm/
+      - title: "Coding Test"
+        url: /categories/codingtest/
       - title: "MAC"
         url: /categories/mac/
       - title: "ETC"
