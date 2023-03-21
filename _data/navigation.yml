@@ -12,8 +12,6 @@ main:
 extensions:
   - title: "Categories"
     children:
-      - title: "TIL"
-        url: /categories/til/
       - title: "Python"
         url: /categories/python/
       - title: "Machine Learning"
