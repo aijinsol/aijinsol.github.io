@@ -71,7 +71,7 @@ last_modified_at: 2023-03-21
     
     6) `사용한 파일과 입출력장치 목록`: `Process`가 실행과정에서 특정 입출력장치나 파일을 사용한 정보
     
-![image02](/assets/images/2023-03-21-process_thread-02.png){: .align-center}{: width="70%" height="70%"}
+![image02](/assets/images/2023-03-21-process_thread-02.png){: .align-center}{: width="80%" height="80%"}
 
 <br>
 
@@ -235,8 +235,8 @@ last_modified_at: 2023-03-21
 
 어떤 방식으로 통신이 이루어질까?
 
-- 파일을 통한 통신: 예를 들어 Process A에는 ‘test.txt’ 파일에 값을 쓰는 프로세스. Process B는 ‘test.txt’ 파일을 읽는 프로세스라면 두 프로세스는 ‘test.txt’ 파일 속 데이터를 주고 받으므로 프로세스 간의 통신이 이루어진다.
-- 공유 메모리: 예를 들어 Process A와 Process B가 공유하는 메모리 영역 내에 ‘name’이라는 전역변수가 있다하자. Process A가 ‘name’ 안에 값을 저장한 뒤, Process B가 ‘name’ 변수 값을 읽어들인다면 두 Process는 전역변수 ‘name’을 통해 값을 주고받으며 통신한 것.
+- `파일을 통한 통신`: 예를 들어 Process A에는 ‘test.txt’ 파일에 값을 쓰는 프로세스. Process B는 ‘test.txt’ 파일을 읽는 프로세스라면 두 프로세스는 ‘test.txt’ 파일 속 데이터를 주고 받으므로 프로세스 간의 통신이 이루어진다.
+- `공유 메모리`: 예를 들어 Process A와 Process B가 공유하는 메모리 영역 내에 ‘name’이라는 전역변수가 있다하자. Process A가 ‘name’ 안에 값을 저장한 뒤, Process B가 ‘name’ 변수 값을 읽어들인다면 두 Process는 전역변수 ‘name’을 통해 값을 주고받으며 통신한 것.
 
 즉, `process` 간의 통신은 모든 자원을 애초에 공유하고 있는 `thread`에 비해 까다로운 것일 뿐 불가능한 것은 아니다!
 
