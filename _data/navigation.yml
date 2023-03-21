@@ -22,7 +22,7 @@ extensions:
         url: /categories/computervision/
       - title: "Natural Language Processing"
         url: /categories/nlp/
-      - title: "CS"
+      - title: "Computer Science"
         url: /categories/cs/
       - title: "Coding Test"
         url: /categories/codingtest/
