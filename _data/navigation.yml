@@ -21,17 +21,19 @@ extensions:
       - title: "Deep Learning"
         url: /categories/deeplearning/
       - title: "Computer Vision"
-        url: /categories/computervision
+        url: /categories/computervision/
       - title: "Natural Language Processing"
         url: /categories/nlp/
+      - title: "CS"
+        url: /categories/cs/
+      - title: "Coding Test"
+        url: /categories/codingtest/
       - title: "Project"
-        url: /categories/project
+        url: /categories/project/
       - title: "Git"
         url: /categories/git/
       - title: "Linear Algebra"
         url: /categories/linearalgebra/
-      - title: "Coding Test"
-        url: /categories/codingtest/
       - title: "MAC"
         url: /categories/mac/
       - title: "ETC"
