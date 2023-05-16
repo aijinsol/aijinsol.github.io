@@ -2,7 +2,7 @@
 title: "[CS] Process vs. Thread"
 excerpt: ""
 categories:
-  - CS
+  - ComputerScience
 tags:
   - program
   - process
