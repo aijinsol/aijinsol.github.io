@@ -338,7 +338,7 @@ print(user2.stock_num)
 2
 ```
 + 모두와 공유하는 정보이기 때문에 굳이 정보를 표시해주지 않은 것!
-+ 인스턴스 `namespace`에 없는 정보라면, 공유하는 정보는 클래스의 `namespace`인 `(Warehouse.__dict__)`에서 정보를 가져온다.
++ 인스턴스 `namespace`에 없는 정보라면, 공유하는 정보는 클래스의 `namespace`인 `Warehouse.__dict__`에서 정보를 가져온다.
 
 <br>
 

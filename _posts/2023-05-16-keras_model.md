@@ -4,12 +4,12 @@ excerpt: ""
 categories:
   - DL
 tags:
-  - Keras
+  - keras
 last_modified_at: 2023-05-16
 ---
 
-`Keras`를 이용해 간단한 모델을 만들어보자.
-- 목표: Keras 모델에 대한 이해!
+> `Keras`를 이용해 간단한 모델을 만들어보자.
+> + 목표: Keras 모델에 대한 이해!
 
 <br>
 
