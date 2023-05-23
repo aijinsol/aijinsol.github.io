@@ -46,9 +46,10 @@ __all__ = ['module1']
 import sys
 import inspect
 
+
 def mod1_test1():
 	print ("Module1 -> Test1")
-	print("Path : ", inspect.getfile(inspect.currentframe()))	# 현재 실행파일의 파일 위치 출력
+	print("Path : ", inspect.getfile(inspect.currentframe()))	 # 현재 실행파일의 파일 위치 출력
 
 def mod1_test2():
 	print ("Module1 -> Test2")
@@ -83,7 +84,7 @@ def mod2_test2():
 + 하지만 하위 버전과의 호환을 위해 `__init__.py` 파일을 생성하는 것이 안전한 방법!
 + `__all__`
     + `__all__` 변수에 정의된 모듈만 import 가능
-    + 따라서, import를 하지 않아야 하는 (ex. 버그를 발생시키는 모듈) 모듈은 `__all__` 변수에서 제외시킨다!
+    + 따라서, import를 하지 않아야 하는 즉, 외부에서 접근하면 안되는 (ex. 버그를 발생시키는 모듈) 모듈은 `__all__` 변수에서 제외시킨다!
 
 <br>
 
@@ -95,13 +96,15 @@ def mod2_test2():
 import sub.sub1.module1
 import sub.sub2.module2
 
+
 # 사용
 sub.sub1.module1.mod1_test1()
 sub.sub1.module1.mod1_test2()
 
 sub.sub2.module2.mod2_test1()
 sub.sub2.module2.mod2_test2()
-
+```
+```
 --------------------------------------------------
 Module1 -> Test1
 Path :  /Users/jinsolkim/Desktop/practice/sub/sub1/module1.py
@@ -119,12 +122,14 @@ Path :  /Users/jinsolkim/Desktop/practice/sub/sub2/module2.py
 from sub.sub1 import module1
 from sub.sub2 import module2 as m2  # alias
 
+
 module1.mod1_test1()
 module1.mod1_test2()
 
 m2.mod2_test1()
 m2.mod2_test2()
-
+```
+```
 --------------------------------------------------
 Module1 -> Test1
 Path :  /Users/jinsolkim/Desktop/practice/sub/sub1/module1.py
@@ -138,18 +143,20 @@ Path :  /Users/jinsolkim/Desktop/practice/sub/sub2/module2.py
 
 ## Example 3: `from ~ import *`
 + asterisk(*)는 웬만하면 쓰지말자
-+ 사용 하지도 않을 파일/함수까지 모두 가져와서 파이썬이 실행될때 굳이 불필요한 작업을 할 필요가 없다. 메모리만 잡아먹는다 
++ 사용하지도 않을 파일/함수까지 모두 가져와서 파이썬이 실행될때 굳이 불필요한 작업을 할 필요가 없다. 메모리만 잡아먹는다 
 
 ```python
 from sub.sub1 import *
 from sub.sub2 import *
+
 
 module1.mod1_test1()
 module1.mod1_test2()
 
 module2.mod2_test1()
 module2.mod2_test2()
-
+```
+```
 --------------------------------------------------
 Module1 -> Test1
 Path :  /Users/jinsolkim/Desktop/practice/sub/sub1/module1.py
