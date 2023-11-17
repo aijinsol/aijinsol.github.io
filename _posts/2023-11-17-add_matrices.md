@@ -10,7 +10,11 @@ tags:
 last_modified_at: 2023-11-17
 ---
 
-> 행렬의 덧셈 연산을 수행하는 함수를 만들어보자!
+<div class="notice--primary" markdown="1">
+✔️ 행렬의 덧셈 연산을 수행하는 함수를 만들어보자!
+</div>
+
+> ✏️ 함께 풀어보면 좋은 코딩테스트 문제: [BOJ 2738](https://www.acmicpc.net/problem/2738)
 
 # Solution 1) `numpy` 이용
 
@@ -118,7 +122,7 @@ print(result_matrix)
 [[10, 10, 10], [10, 10, 10], [10, 10, 10]]
 ```
 
-<div class="notice--info" markdown="1">
+<div class="notice" markdown="1">
 💡 <b>"Loop를 사용하거나 list comprehension을 사용하는 경우에 따라 큰 행렬에서 메모리 사용량이 달라질 수 있다??"</b>
 
 - `List comprehension`보다 `Loop`를 사용하여 각 원소를 하나씩 처리하는 방식이 메모리를 덜 사용할 수 있다는 것을 의미
