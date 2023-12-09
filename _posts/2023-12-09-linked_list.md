@@ -1,10 +1,10 @@
 ---
-title: "[CS] LinkedList"
-excerpt: "Python으로 LinkedList 구현하기"
+title: "[CS] Linked List"
+excerpt: "Python으로 Linked List 구현하기"
 categories:
   - CS
 tags:
-  - LinkedList
+  - Linked List
 last_modified_at: 2023-12-09
 ---
 
