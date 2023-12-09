@@ -32,7 +32,7 @@ last_modified_at: 2023-12-09
 
 <br>
 
-이번 포스팅에서 Python을 이용하여 간단하게 `LinkedList`를 구현하는 방법을 알아보자!
+이번 포스팅에서 Python을 이용하여 간단하게 `Linked List`를 구현하는 방법을 알아보자!
 
 <br>
 
