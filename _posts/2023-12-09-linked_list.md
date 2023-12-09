@@ -2,7 +2,7 @@
 title: "[CS] Linked List"
 excerpt: "Python으로 Linked List 구현하기"
 categories:
-  - CS
+  - ComputerScience
 tags:
   - Linked List
 last_modified_at: 2023-12-09
