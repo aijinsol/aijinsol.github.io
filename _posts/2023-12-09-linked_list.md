@@ -44,8 +44,11 @@ last_modified_at: 2023-12-09
 - 각 노드는 값을 저장하는 `value`와 다음 노드를 가리키는 `next`를 가지고 있다.
 
 ```python
+from typing import Self
+
+
 class Node:
-    def __init__(self, value=0, next=None):
+    def __init__(self, value: Any = 0, next: Self | None = None):
         self.value = value
         self.next = next
 ```
@@ -58,12 +61,15 @@ class Node:
 - `LinkedList` 클래스는 노드들의 연결 정보를 가지고 있으며, 각 연산을 통해 리스트를 조작할 수 있다.
 
 ```python
+from typing import Any
+
+
 class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
 
-    def append(self, value):  # Time Complexity: O(N)
+    def append(self, value: Any):  # Time Complexity: O(N)
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -73,7 +79,7 @@ class LinkedList:
                 current = current.next
             current.next = new_node
 
-    def append_v2(self, value):  # Time Complexity: O(1)
+    def append_v2(self, value: Any):  # Time Complexity: O(1)
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -82,13 +88,13 @@ class LinkedList:
             self.tail.next = new_node
             self.tail = self.tail.next
 
-    def get(self, idx):
+    def get(self, idx: int) -> Any:
         current = self.head
         for _ in range(idx):
             current = current.next
         return current.value
 
-    def insert(self, idx, value):
+    def insert(self, idx: int, value: Any):
         new_node = Node(value)
         current = self.head
         for _ in range(idx-1):
@@ -96,7 +102,7 @@ class LinkedList:
         new_node.next = current.next
         current.next = new_node
 
-    def remove(self, idx):
+    def remove(self, idx: int):
         # Garbage Collector removes the node
         if idx == 0:
             self.head = self.head.next
