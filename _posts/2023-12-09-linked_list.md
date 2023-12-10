@@ -9,7 +9,7 @@ last_modified_at: 2023-12-09
 ---
 
 <div class="notice--primary" markdown="1">
-✔️ Python으로 LinkedList를 직접 구현해보자!
+✔️ Python으로 Linked List를 직접 구현해보자!
 </div>
 
 > ✏️ 함께 풀어보면 좋은 코딩테스트 문제: [LeetCode #1472. Design Browser History](https://leetcode.com/problems/design-browser-history/description/)
@@ -58,7 +58,7 @@ class Node:
 - `LinkedList` 클래스는 노드들의 연결 정보를 가지고 있으며, 각 연산을 통해 리스트를 조작할 수 있다.
 
 ```python
-class LinkedList(object):
+class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
