@@ -218,7 +218,7 @@
 
     &:before {
       @supports (pointer-events: none) {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
@@ -312,10 +312,10 @@
 
   a {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;
@@ -352,4 +352,3 @@
     margin-right: initial;
   }
 }
-
