@@ -104,7 +104,7 @@ analytics:
 author:
   name: "aijinsol"
   avatar: "/assets/images/profile_image1.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "ML Engineer"
+  bio: ""
   location: "Seoul, Korea"
   email:
   links:
