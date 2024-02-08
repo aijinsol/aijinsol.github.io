@@ -1,6 +1,6 @@
 ---
 title: "[Algorithm] 피보나치 수열 구현하기"
-excerpt: "재귀함수, dp, cache 3가지 방법으로 풀어보기"
+excerpt: "재귀함수, dp, cache 3가지 방법으로 구현하기"
 categories:
   - Algorithm
 tags:
