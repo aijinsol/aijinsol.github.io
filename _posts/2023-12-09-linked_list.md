@@ -5,7 +5,7 @@ categories:
   - ComputerScience
 tags:
   - Linked List
-last_modified_at: 2023-12-09
+last_modified_at: 2024-01-30
 ---
 
 <div class="notice--primary" markdown="1">
@@ -117,6 +117,8 @@ class LinkedList:
 
 - 노드를 리스트의 끝에 추가하는 메소드
 - 리스트의 모든 노드를 확인하며 끝을 찾기 때문에 시간복잡도는 `O(N)`
+- `if ~`: head가 None을 가리키고 있다면, 아직 Node가 없는 상태이므로, 이 때는 새로운 Node가 들어온다면 head가 new_node를 가리키도록 한다
+- `else ~`: Current라는 새로운 변수가 head가 가리키는 Node를 가리키게끔 변수 선언. Current가 가리키는 Node의 next가 None일 될 때까지 이동해서(현재의 Linked List의 마지막 Node까지 이동), None인 Node에서 while문을 빠져나와 `current.next = new_node`로 설정해준다
 
 ### 2-2) `append_v2` 메소드
 
@@ -126,12 +128,20 @@ class LinkedList:
 ### 2-3) `get` 메소드
 
 - 주어진 인덱스에 해당하는 노드의 값을 반환하는 메소드
-- 이 연산은 인덱스에 비례하는 시간이 소요되므로 시간복작보는 `O(N)`
+- 이 연산은 인덱스에 비례하는 시간이 소요되므로 시간복잡도는 `O(N)`
+- 구현 방법
+  - Step 1) current 변수를 이용해서 head에 접근
+  - Step 2) index 수 만큼 원하는 index로 이동
+  - Step 3) current Node의 value 반환
 
 ### 2-4) `insert` 메소드
 
 - 주어진 인덱스에 새로운 값을 갖는 노드를 삽입하는 메소드
 - 삽입 시에는 해당 인덱스를 찾아가는 과정이 필요하므로 시간복잡도는 `O(N)`
+- 구현 방법
+    - Step 1) Current 변수를 new_node를 삽입하기 직전의 Node까지 이동
+    - Step 2) new_node의 next address를 다음 Node의 address에 연결
+    - Step 3) current의 next address를 new_node의 address에 연결
 
 ### 2-5) `remove` 메소드
 
