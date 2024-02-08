@@ -1,8 +1,9 @@
 ---
-title: "[CS] Linked List"
+title: "[CS/Algorithm] Linked List"
 excerpt: "Python으로 Linked List 구현하기"
 categories:
   - ComputerScience
+  - Algorithm
 tags:
   - Linked List
 last_modified_at: 2024-01-30
@@ -139,9 +140,9 @@ class LinkedList:
 - 주어진 인덱스에 새로운 값을 갖는 노드를 삽입하는 메소드
 - 삽입 시에는 해당 인덱스를 찾아가는 과정이 필요하므로 시간복잡도는 `O(N)`
 - 구현 방법
-    - Step 1) Current 변수를 new_node를 삽입하기 직전의 Node까지 이동
-    - Step 2) new_node의 next address를 다음 Node의 address에 연결
-    - Step 3) current의 next address를 new_node의 address에 연결
+  - Step 1) Current 변수를 new_node를 삽입하기 직전의 Node까지 이동
+  - Step 2) new_node의 next address를 다음 Node의 address에 연결
+  - Step 3) current의 next address를 new_node의 address에 연결
 
 ### 2-5) `remove` 메소드
 
