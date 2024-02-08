@@ -14,6 +14,10 @@ extensions:
     children:
       - title: "Python"
         url: /categories/python/
+      - title: "Computer Science"
+        url: /categories/cs/
+      - title: "Algorithm"
+        url: /categories/algorithm/
       - title: "Machine Learning"
         url: /categories/machinelearning/
       - title: "Deep Learning"
@@ -22,16 +26,12 @@ extensions:
         url: /categories/computervision/
       - title: "Natural Language Processing"
         url: /categories/nlp/
-      - title: "Computer Science"
-        url: /categories/cs/
-      - title: "Coding Test"
-        url: /categories/codingtest/
+      - title: "Linear Algebra"
+        url: /categories/linearalgebra/
       - title: "Project"
         url: /categories/project/
       - title: "Git"
         url: /categories/git/
-      - title: "Linear Algebra"
-        url: /categories/linearalgebra/
       - title: "MAC"
         url: /categories/mac/
       - title: "ETC"
