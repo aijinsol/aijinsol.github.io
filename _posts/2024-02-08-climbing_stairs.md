@@ -1,6 +1,6 @@
 ---
 title: "[Algorithm] Leetcode #70. Climbing Stairs"
-excerpt: "재귀함수, dp, cache 3가지 방법으로 풀어보기"
+excerpt: "재귀함수, top-down dp, bottom-up, cache 4가지 방법으로 풀어보기"
 categories:
   - Algorithm
 tags:
