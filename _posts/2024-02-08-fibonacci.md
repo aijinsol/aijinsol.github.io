@@ -146,7 +146,7 @@ def fibonacci_cache(n: int) -> int:
 ```python
 import timeit
 
-# 실행 시간을 측정할 함수들의 리스트
+
 functions = [
     fibonacci_recursive,
     fibonacci_top_down,
