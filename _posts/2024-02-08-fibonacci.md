@@ -23,25 +23,9 @@ last_modified_at: 2024-02-08
 ```python
 def fibonacci_recursive(n: int) -> int:
     if n < 2:
-        return n
+        return n  # Base cases
+
     return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
-```
-
-```python
-# 실행 시간 측정
-import time
-
-
-start_time_recursive = time.time()
-print(fibonacci_recursive(30))
-end_time_recursive = time.time()
-
-print(f"With recursive: {end_time_recursive - start_time_recursive} seconds")
-```
-
-```
-832040
-With recursive: 0.18014598 seconds
 ```
 
 - O(2<sup>n</sup>)의 높은 지수적 시간복잡도라는 아쉬움!
@@ -57,30 +41,14 @@ With recursive: 0.18014598 seconds
 > Time Complexity: O(n)
 
 ```python
-from typing import Dict
+def fibonacci_top_down(n: int, dp: dict[int, int] | None = None) -> int:
+    if dp is None:
+        dp = {0: 0, 1: 1}  # Base cases
 
+    if n not in dp:
+        dp[n] = fibonacci_top_down(n - 1, dp) + fibonacci_top_down(n - 2, dp)
 
-def fibonacci_top_down(n: int, memo: Dict[int, int] = None) -> int:
-    if memo is None:
-        memo = {0: 0, 1: 1}  # Base cases
-    if n in memo:
-        return memo[n]
-    memo[n] = fibonacci_top_down(n - 1, memo) + fibonacci_top_down(n - 2, memo)
-    return memo[n]
-```
-
-```python
-# 실행 시간 측정
-start_time_top_down = time.time()
-print(fibonacci_top_down(30))
-end_time_top_down = time.time()
-
-print(f"With top_down: {end_time_top_down - start_time_top_down} seconds")
-```
-
-```
-832040
-With top_down: 0.00006318 seconds
+    return dp[n]
 ```
 
 - 실행시간을 선형 복잡도인 O(n)으로 크게 줄이며, memoization dictionary에 대한 메모리 사용량이 소폭 증가한다.
@@ -88,33 +56,64 @@ With top_down: 0.00006318 seconds
 
 <br>
 
-# Solution 3) DP: Bottom-Up (for-loop)
+# Solution 3) DP: Bottom-Up (for loop)
 
 > Time Complexity: O(n)
 
+## `List` 활용
+
 ```python
-def fibonacci_bottom_up(n: int) -> int:
+def fibonacci_bottom_up_list(n: int) -> int:
+    dp = [0] * (n + 1)
+    dp[0], dp[1] = 0, 1  # Base cases
+
     if n <= 1:
         return n
-    prev_two, prev_one = 0, 1
+
     for i in range(2, n + 1):
-        prev_two, prev_one = prev_one, prev_one + prev_two
-    return prev_one
+        dp[i] = dp[i - 1] + dp[i - 2]
+
+    return dp[n]
 ```
+
+❓ List를 사용하여 Bottom-Up DP를 구현한 방식의 장단점은 어떻게 될까?
+
+- 장점
+  - <b>Index 접근</b>: List는 index를 통해 각 원소에 빠르게 접근할 수 있으므로, 연속적인 숫자를 다룰 때 이 방식이 자연스럽고 효율적이다. 피보나치 수열처럼 연속적인 값을 순차적으로 계산할 때 적합하다!
+  - <b>Memory 사용</b>: List는 미리 정의된 크기의 연속된 memory 공간에 데이터를 저장하므로, 피보나치 수열과 같이 연속적인 index에 대해 계산할 때 공간을 효율적으로 사용할 수 있다.
+- 단점
+  - <b>Fixed size</b>: List를 사용할 때는 계산하고자 하는 피보나치 수열의 최대 index에 해당하는 크기로 미리 memory를 할당해야 하므로, 매우 큰 index 값을 계산할 경우 초기 memory 할당이 비효율적일 수 있다.
+
+<div class="notice--success" markdown="1">
+💡 코테에서 웬만하면 Bottom-Up DP는 Dictionary보다는 List로 구현하자!
+- List 기반 구현이 일반적으로 index 접근이 빠르기 때문에 약간 더 효율적일 수 있다. Dictionary 기반 구현은 더 유연하고 동적인 데이터 저장이 가능하지만, 이러한 피보나치 수열 문제를 포함한 대부분의 코딩테스트 문제에서는 데이터 범위가 연속적이거나 dense한 데이터 범위를 가지므로 list가 더 적합할 수 있다.
+</div>
+
+<br>
+
+## `Dictionary` 활용
 
 ```python
-# 실행 시간 측정
-start_time_bottom_up = time.time()
-print(fibonacci_bottom_up(30))
-end_time_bottom_up = time.time()
+def fibonacci_bottom_up_dict(n: int) -> int:
+    dp = {0: 0, 1: 1}  # Base cases
 
-print(f"With bottom_up: {end_time_bottom_up - start_time_bottom_up} seconds")
+    if n <= 1:
+        return dp[n]
+
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+
+    return dp[n]
 ```
 
-```
-832040
-With bottom_up: 0.00004315 seconds
-```
+❓ Dictionary를 사용하여 Bottom-Up DP를 구현한 방식의 장단점은 어떻게 될까?
+
+- 장점
+  - <b>유연한 Memory 사용</b>: Dictionary를 사용하면 필요한 key-value 쌍만 저장하므로, 계산 과정에서 필요한 index의 값만 memory에 유지하게 된다. 이는 계산해야 하는 값의 범위가 클 때 memory 사용을 좀 더 유연하게 관리할 수 있게 한다.
+  - <b>Key-value 접근</b>: Dictionary는 key-value 쌍으로 데이터를 저장하므로, 특정 조건에 따라 index가 비연속적인 경우에도 효율적으로 데이터를 관리하고 접근할 수 있다.
+- 단점
+  - <b>접근 시간</b>: 파이썬의 dictionary는 내부적으로 해시 테이블을 사용하여 구현되므로, 평균적인 경우에는 매우 빠른 접근 시간을 제공한다. 그러나 최악의 경우(해시 collision이 많을 때) 접근 시간이 늘어날 수 있다.
+  - <b>Memory overhead</b>: Dictionary는 key와 value 모두를 저장해야 하므로, list에 비해 추가적인 memory overhead가 발생할 수 있다. 특히 key-value 쌍이 많아질수록 이 overhead는 더욱 증가한다.
 
 <br>
 
@@ -129,27 +128,47 @@ from functools import cache
 @cache
 def fibonacci_cache(n: int) -> int:
     if n < 2:
-        return n
+        return n  # Base cases
+
     return fibonacci_cache(n - 1) + fibonacci_cache(n - 2)
-```
-
-```python
-# 실행 시간 측정
-start_time_cache = time.time()
-print(fibonacci_cache(30))
-end_time_cache = time.time()
-
-print(f"With cache: {end_time_cache - start_time_cache} seconds")
-```
-
-```
-832040
-With cache: 0.00007820 seconds
 ```
 
 - Top-Down DP 접근 방식과 마찬가지
 - `functools.cache`는 실행시간을 O(n)으로 줄이면서 캐싱 메커니즘을 내부적으로 처리한다.
 - 이는 성능을 개선할 뿐만 아니라 memoization 과정을 추상화하여 코드를 단순화한다.
+
+<br>
+
+# Runtime Comparison
+
+위에서 구현한 4가지 방식의 함수로 실행 시간을 측정하고, 비교해보자!
+
+```python
+import timeit
+
+# 실행 시간을 측정할 함수들의 리스트
+functions = [
+    fibonacci_recursive,
+    fibonacci_top_down,
+    fibonacci_bottom_up_list,
+    fibonacci_bottom_up_dict,
+    fibonacci_cache
+]
+
+# 각 함수의 실행 시간 측정
+for func in functions:
+    timer = timeit.Timer(lambda: func(30))
+    elapsed_time = timer.timeit(number=100)  # 100번 실행 평균 시간
+    print(f"{func.__name__}: {elapsed_time:.8f} seconds")
+```
+
+```
+fibonacci_recursive: 16.82809308 seconds
+fibonacci_top_down: 0.00059779 seconds
+fibonacci_bottom_up_list: 0.00021792 seconds
+fibonacci_bottom_up_dict: 0.00024538 seconds
+fibonacci_cache: 0.00000704 seconds
+```
 
 <br>
 
@@ -159,7 +178,7 @@ With cache: 0.00007820 seconds
 
 ## 1) Time Complexity & Runtime
 
-> Recursive > Cache > Top-Down > Bottom-Up
+> Recursive > Top-Down > Bottom-Up DP(dictionary) > Bottom-Up DP(list) > Cache
 
 - <b>Recursive</b>
   - Time Complexity: O(2<sup>n</sup>)

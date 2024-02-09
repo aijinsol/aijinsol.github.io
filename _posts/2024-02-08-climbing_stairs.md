@@ -26,6 +26,7 @@ last_modified_at: 2024-02-08
 def climbStairs_recursive(n: int) -> int:
     if n <= 2:
         return n
+
     return climbStairs_recursive(n - 1) + climbStairs_recursive(n - 2)
 ```
 
@@ -36,33 +37,51 @@ def climbStairs_recursive(n: int) -> int:
 > Time Complexity: O(n)
 
 ```python
-from typing import Dict
+def climbStairs_top_down(n: int, dp: dict[int, int] | None = None) -> int:
+    if dp is None:
+      dp = {1: 1, 2: 2}
 
+    if n not in dp:
+        dp[n] = climbStairs_top_down(n - 1, dp) + climbStairs_top_down(n - 2, dp)
 
-def climbStairs_top_down(n: int, memo: Dict[int, int] = None) -> int:
-    if memo is None:
-      memo = {1: 1, 2: 2}
-    if n in memo:
-        return memo[n]
-    memo[n] = climbStairs_top_down(n - 1, memo) + climbStairs_top_down(n - 2, memo)
-    return memo[n]
+    return dp[n]
 ```
 
 <br>
 
-# Solution 3) DP: Bottom-Up (for-loop)
+# Solution 3) DP: Bottom-Up (for loop)
 
 > Time Complexity: O(n)
 
+## `List` 활용
+
 ```python
-def climbStairs_bottom_up(n: int) -> int:
+def climbStairs_bottom_up_list(n: int) -> int:
     if n <= 2:
         return n
-    prev_two_steps, prev_one_step = 1, 2
+
+    dp = [0] * (n + 1)
+    dp[1], dp[2] = 1, 2
+
     for i in range(3, n + 1):
-        current = prev_one_step + prev_two_steps
-        prev_two_steps, prev_one_step = prev_one_step, current
-    return prev_one_step
+        dp[i] = dp[i - 1] + dp[i - 2]
+
+    return dp[n]
+```
+
+## `Dictionary` 활용
+
+```python
+def climbStairs_bottom_up_dict(n: int) -> int:
+    dp = {1: 1, 2: 2}
+
+    if n <= 2:
+        return dp[n]
+
+    for i in range(3, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+
+    return dp[n]
 ```
 
 <br>
@@ -79,5 +98,6 @@ from functools import cache
 def climbStairs_cache(n: int) -> int:
     if n <= 2:
         return n
+
     return climbStairs_cache(n - 1) + climbStairs_cache(n - 2)
 ```
