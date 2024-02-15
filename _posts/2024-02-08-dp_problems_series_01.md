@@ -10,11 +10,11 @@ tags:
 last_modified_at: 2024-02-15
 ---
 
-> <b>DP Problems Series</b>에서는 DP 문제를 접했을 때 풀이할 수 있는 4가지 방법으로 정리하고 풀어본다.
+> <b>DP Problems Series</b>에서는 DP 문제를 접했을 때 풀이할 수 있는 4가지 방법으로 정리하고 유형화한다.
 >
-> - [[Algorithm] DP Problems Series #1: 피보나치 수열 구현하기](https://aijinsol.github.io/algorithm/fibonacci/) 👈🏻 현재 게시글!
-> - [[Algorithm] DP Problems Series #2: Leetcode #70. Climbing Stairs](https://aijinsol.github.io/algorithm/climbing_stairs/)
-> - [[Algorithm] DP Problems Series #3: Leetcode #746. Min Cost Climbing Stairs](https://aijinsol.github.io/algorithm/min_cost_climbing_stairs/)
+> - [[Algorithm] DP Problems Series #1: 피보나치 수열 구현하기](https://aijinsol.github.io/algorithm/problems_series_01/) 👈🏻 현재 게시글!
+> - [[Algorithm] DP Problems Series #2: Leetcode #70. Climbing Stairs](https://aijinsol.github.io/algorithm/problems_series_02/)
+> - [[Algorithm] DP Problems Series #3: Leetcode #746. Min Cost Climbing Stairs](https://aijinsol.github.io/algorithm/problems_series_03/)
 
 # Intro
 

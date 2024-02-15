@@ -1,18 +1,26 @@
 ---
-title: "[Algorithm] Leetcode #746. Min Cost Climbing Stairs"
-excerpt: "Climbing Stairs Series #2"
+title: "[Algorithm] DP Problems Series #3: Leetcode #746. Min Cost Climbing Stairs"
+excerpt: "재귀함수, top-down dp, bottom-up, cache 4가지 방법으로 풀어보기"
 categories:
   - Algorithm
 tags:
   - recursive
   - dp
   - cache
-last_modified_at: 2024-02-13
+last_modified_at: 2024-02-15
 ---
 
-> ✏️ [LeetCode #746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+> <b>DP Problems Series</b>에서는 DP 문제를 접했을 때 풀이할 수 있는 4가지 방법으로 정리하고 풀어본다.
+>
+> - [[Algorithm] DP Problems Series #1: 피보나치 수열 구현하기](https://aijinsol.github.io/algorithm/problems_series_01/)
+> - [[Algorithm] DP Problems Series #2: Leetcode #70. Climbing Stairs](https://aijinsol.github.io/algorithm/problems_series_02/)
+> - [[Algorithm] DP Problems Series #3: Leetcode #746. Min Cost Climbing Stairs](https://aijinsol.github.io/algorithm/problems_series_03/) 👈🏻 현재 게시글!
+
+<br>
 
 # Intro
+
+> ✏️ [LeetCode #746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
 
 Leetcode의 Min Cost Climbing Stairs 문제를 4가지 방식(재귀, Top-Down DP, Bottom-Up DP, Cache)으로 풀어보자.
 
