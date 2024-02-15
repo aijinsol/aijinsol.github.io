@@ -5,20 +5,20 @@ categories:
   - Algorithm
 tags:
   - recursive
-  - cache
   - dp
-last_modified_at: 2024-02-08
+  - cache
+last_modified_at: 2024-02-15
 ---
 
 > <b>DP Problems Series</b>에서는 DP 문제를 접했을 때 풀이할 수 있는 4가지 방법으로 정리하고 풀어본다.
 >
-> - [[Algorithm] DP Problems Series #1: 피보나치 수열 구현하기](https://aijinsol.github.io/algorithm/fibonacci/)
+> - [[Algorithm] DP Problems Series #1: 피보나치 수열 구현하기](https://aijinsol.github.io/algorithm/fibonacci/) 👈🏻 현재 게시글!
 > - [[Algorithm] DP Problems Series #2: Leetcode #70. Climbing Stairs](https://aijinsol.github.io/algorithm/climbing_stairs/)
 > - [[Algorithm] DP Problems Series #3: Leetcode #746. Min Cost Climbing Stairs](https://aijinsol.github.io/algorithm/min_cost_climbing_stairs/)
 
 # Intro
 
-알고리즘 공부할 때 기본이 되는 피보나치 수열은 다양한 프로그래밍 개념을 공부하기에 아주 좋은 예제이다. 이번 포스팅에서는 <b>1) 기본 재귀</b>, <b>2) Dynamic Programming의 Top-Down</b>과 <b>3) Bottom-Up</b> 그리고 Python 3.9 이상에서 사용 가능한 <b>4) `functools.cache`</b>를 이용한 4가지 다른 접근 방법으로 피보나치 수열을 구현하는 방법을 비교해볼 것이다. 실행 시간, 메모리 사용량 및 내부 메커니즘을 기준으로 이러한 방법들을 비교하며, 단순하지만 비효율적인 방법에서 더 발전된 효율적인 솔루션을 구현해보자! 😀
+알고리즘 공부할 때 기본이 되는 피보나치 수열은 다양한 프로그래밍 개념을 공부하기에 아주 좋은 예제이다. 이번 포스팅에서는 <u><b>1) 기본 재귀</b></u>, <u><b>2) Dynamic Programming의 Top-Down</b></u>과 <u><b>3) Bottom-Up</b></u> 그리고 Python 3.9 이상에서 사용 가능한 <u><b>4) functools.cache</b></u>를 이용한 4가지 다른 접근 방법으로 피보나치 수열을 구현하는 방법을 비교해볼 것이다. 실행 시간, 메모리 사용량 및 내부 메커니즘을 기준으로 이러한 방법들을 비교하며, 단순하지만 비효율적인 방법에서 더 발전된 효율적인 솔루션을 구현해보자! 😀
 
 <br>
 
