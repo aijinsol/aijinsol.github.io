@@ -1,6 +1,6 @@
 ---
-title: "[Algorithm] 피보나치 수열 구현하기"
-excerpt: "재귀함수, top-down dp, bottom-up, cache 4가지 방법으로 구현하기"
+title: "[Algorithm] DP Problems Series #1: 피보나치 수열 구현하기"
+excerpt: "재귀함수, top-down dp, bottom-up dp, cache 4가지 방법으로 구현하기"
 categories:
   - Algorithm
 tags:
@@ -10,9 +10,15 @@ tags:
 last_modified_at: 2024-02-08
 ---
 
+> <b>DP Problems Series</b>에서는 DP 문제를 접했을 때 풀이할 수 있는 4가지 방법으로 정리하고 풀어본다.
+>
+> - [[Algorithm] DP Problems Series #1: 피보나치 수열 구현하기](https://aijinsol.github.io/algorithm/fibonacci/)
+> - [[Algorithm] DP Problems Series #2: Leetcode #70. Climbing Stairs](https://aijinsol.github.io/algorithm/climbing_stairs/)
+> - [[Algorithm] DP Problems Series #3: Leetcode #746. Min Cost Climbing Stairs](https://aijinsol.github.io/algorithm/min_cost_climbing_stairs/)
+
 # Intro
 
-알고리즘 공부할 때 기본이 되는 피보나치 수열은 다양한 프로그래밍 개념을 공부하기에 아주 좋은 예제이다. 이번 포스팅에서는 기본 재귀, Dynamic Programming의 Top-Down과 Bottom-Up 그리고 Python 3.9 이상에서 사용 가능한 `functools.cache`를 이용한 네 가지 다른 접근 방법으로 피보나치 수열을 구현하는 방법을 비교해볼 것이다. 실행 시간, 메모리 사용량 및 내부 메커니즘을 기준으로 이러한 방법들을 비교하며, 단순하지만 비효율적인 방법에서 더 발전된 효율적인 솔루션을 구현해보자! 😀
+알고리즘 공부할 때 기본이 되는 피보나치 수열은 다양한 프로그래밍 개념을 공부하기에 아주 좋은 예제이다. 이번 포스팅에서는 <b>1) 기본 재귀</b>, <b>2) Dynamic Programming의 Top-Down</b>과 <b>3) Bottom-Up</b> 그리고 Python 3.9 이상에서 사용 가능한 <b>4) `functools.cache`</b>를 이용한 4가지 다른 접근 방법으로 피보나치 수열을 구현하는 방법을 비교해볼 것이다. 실행 시간, 메모리 사용량 및 내부 메커니즘을 기준으로 이러한 방법들을 비교하며, 단순하지만 비효율적인 방법에서 더 발전된 효율적인 솔루션을 구현해보자! 😀
 
 <br>
 
@@ -70,8 +76,8 @@ def fibonacci_bottom_up_list(n: int) -> int:
     if n <= 1:
         return n
 
-    for i in range(2, n + 1):
-        dp[i] = dp[i - 1] + dp[i - 2]
+    for idx in range(2, n + 1):
+        dp[idx] = dp[idx - 1] + dp[idx - 2]
 
     return dp[n]
 ```
@@ -100,8 +106,8 @@ def fibonacci_bottom_up_dict(n: int) -> int:
     if n <= 1:
         return dp[n]
 
-    for i in range(2, n + 1):
-        dp[i] = dp[i - 1] + dp[i - 2]
+    for key in range(2, n + 1):
+        dp[key] = dp[key - 1] + dp[key - 2]
 
     return dp[n]
 ```
