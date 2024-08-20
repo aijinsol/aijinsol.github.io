@@ -197,11 +197,12 @@ last_modified_at: 2024-08-19
 
 ```python
 from dataclasses import dataclass
+from typing import ClassVar
 
 
 @dataclass
 class Employee:
-    raise_amount = 1.05  # Class Variable    
+    raise_amount: ClassVar[int] = 1.05  # Class Variable with type hint
     name: str  # Instance Variable
     salary: int = 100 # Instance Variable with default value
 
@@ -224,6 +225,8 @@ employee = Employee.from_string('aijinsol-200')
 
 print(employee)  # Output: Employee(name='aijinsol', salary=200)
 ```
-참고: `dataclass`를 사용해서 클래스를 정의할 때, 클래스 변수는 일반 클래스와 마찬가지로 정의하고, 인스턴스 변수는 타입 힌트를 사용해서 정의한다.
+- `dataclass`를 사용해서 클래스를 정의할 때, class variable은 일반 클래스와 마찬가지로 정의하고, instance variable은 type hint를 사용해서 정의한다.
+- class variable의 type hint는 `ClassVar`를 사용한다.
+- instance variable의 default value가 있는 경우 `=`를 사용해서 지정한다.
 
 ❗ <b>결론</b>: `classmethod`를 사용하면 클래스메서드를 통해 더 직관적이고 간편하게 객체를 생성할 수 있다.
