@@ -1,9 +1,10 @@
 ---
-title: "[Python] dataclass, staticmethod, classmethod 이해하기"
+title: "[Python] `dataclass`, `staticmethod`, `classmethod` 이해하기"
 excerpt: ""
 categories:
   - Python
 tags:
+  - decorators
   - dataclass
   - staticmethod
   - classmethod
@@ -68,7 +69,7 @@ last_modified_at: 2024-08-19
     print(book1 == book2)  # Output: True
     ```
 
-✔️ <b>결론</b>: `dataclass`를 사용하면 불필요한 코드를 줄이고, 클래스를 더욱 간결하게 정의할 수 있다.
+❗ <b>결론</b>: `dataclass`를 사용하면 불필요한 코드를 줄이고, 클래스를 더욱 간결하게 정의할 수 있다.
 
 <br>
 
@@ -115,7 +116,7 @@ last_modified_at: 2024-08-19
     print(result)  # Output: 15
     ```
 
-✔️ 결론: `staticmethod`를 사용하면 클래스의 인스턴스를 생성할 필요 없이 메서드를 직접 호출할 수 있어 코드를 더 깔끔하게 작성할 수 있다.
+❗ <b>결론</b>: `staticmethod`를 사용하면 클래스의 인스턴스를 생성할 필요 없이 메서드를 직접 호출할 수 있어 코드를 더 깔끔하게 작성할 수 있다.
 
 <br>
 
@@ -185,9 +186,44 @@ last_modified_at: 2024-08-19
     클래스 메서드로 객체 생성
     ```python
     employee = Employee.from_string("aijinsol-100")
-    
+
     print(employee.name)  # Output: aijinsol
     print(employee.salary)  # Output: 100
     ```
 
-✔️ 결론: `classmethod`를 사용하면 클래스메서드를 통해 더 직관적이고 간편하게 객체를 생성할 수 있다.
+<br>
+
+💡 위 코드를 dataclass를 사용하는 코드로 바꿔보기!
+
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Employee:
+    raise_amount = 1.05  # Class Variable    
+    name: str  # Instance Variable
+    salary: int = 100 # Instance Variable with default value
+
+    @classmethod
+    def set_raise_amount(cls, amount):
+        cls.raise_amount = amount
+
+    @classmethod
+    def from_string(cls, employee_str):
+        name, salary = employee_str.split('-')
+        return cls(name, int(salary))
+```
+```python
+Employee.set_raise_amount(1.2)
+
+print(Employee.raise_amount)  # Output: 1.2
+```
+```python
+employee = Employee.from_string('aijinsol-200')
+
+print(employee)  # Output: Employee(name='aijinsol', salary=200)
+```
+참고: `dataclass`를 사용해서 클래스를 정의할 때, 클래스 변수는 일반 클래스와 마찬가지로 정의하고, 인스턴스 변수는 타입 힌트를 사용해서 정의한다.
+
+❗ <b>결론</b>: `classmethod`를 사용하면 클래스메서드를 통해 더 직관적이고 간편하게 객체를 생성할 수 있다.

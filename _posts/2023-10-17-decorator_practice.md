@@ -4,7 +4,7 @@ excerpt: "유형별 decorator 만들기 연습 (feat. # of params)"
 categories:
   - Python
 tags:
-  - decorator
+  - decorators
 last_modified_at: 2023-10-17
 ---
 
