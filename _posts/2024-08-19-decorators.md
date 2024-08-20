@@ -13,7 +13,7 @@ last_modified_at: 2024-08-19
 # 1. `dataclass`
 
 ## 1) 정의 및 기능
-- `dataclass`는 데이터를 저장하는 데 사용하는 클래스를 쉽게 만들 수 있게 도와주는 Python 데코리에터이다.
+- `dataclass`는 데이터를 저장하는 데 사용하는 클래스를 쉽게 만들 수 있게 도와주는 Python 데코레이터다.
 - 데이터를 저장하기 위한 클래스를 만들 때는 보통 `__init__`, `__repr__`, `__eq__` 등의 메서드를 정의해야 하는데, `dataclass`는 클래스를 정의할 때 이러한 메서드를 자동으로 생성해준다.
 
 - 주요 기능
@@ -40,7 +40,8 @@ last_modified_at: 2024-08-19
             if not isinstance(other, Book):
                 return False
             return self.title == other.title and self.author == other.author and self.pages == other.pages
-
+    ```
+    ```python
     book1 = Book("Python", "aijinsol", 300)
     book2 = Book("Python", "aijinsol", 300)
 
@@ -58,7 +59,8 @@ last_modified_at: 2024-08-19
         title: str
         author: str
         pages: int
-
+    ```
+    ```python
     book1 = Book("Python", "aijinsol", 300)
     book2 = Book("Python", "aijinsol", 300)
 
@@ -66,7 +68,7 @@ last_modified_at: 2024-08-19
     print(book1 == book2)  # Output: True
     ```
 
-✔️ 결론: `dataclass`를 사용하면 불필요한 코드를 줄이고, 클래스를 더욱 간결하게 정의할 수 있다.
+✔️ <b>결론</b>: `dataclass`를 사용하면 불필요한 코드를 줄이고, 클래스를 더욱 간결하게 정의할 수 있다.
 
 <br>
 
@@ -90,7 +92,8 @@ last_modified_at: 2024-08-19
     class MathOperations:
         def multiply(self, a, b):
             return a * b
-
+    ```
+    ```python
     math_op = MathOperations()
     result = math_op.multiply(5, 3)
 
@@ -105,7 +108,8 @@ last_modified_at: 2024-08-19
         @staticmethod
         def multiply(a, b):
             return a * b
-
+    ```
+    ```python
     result = MathOperations.multiply(5, 3)
 
     print(result)  # Output: 15
@@ -140,6 +144,7 @@ last_modified_at: 2024-08-19
     클래스 변수 직접 수정
     ```python
     Employee.raise_amount = 1.2
+
     print(Employee.raise_amount)  # Output: 1.2
     ```
     문자열을 분리해 수동으로 객체 생성
@@ -147,6 +152,7 @@ last_modified_at: 2024-08-19
     employee_str = "aijinsol-100"
     name, salary = employee_str.split('-')
     employee = Employee(name, int(salary))
+
     print(employee.name)  # Output: aijinsol
     print(employee.salary)  # Output: 100
     ```
@@ -173,11 +179,13 @@ last_modified_at: 2024-08-19
     클래스 메서드 사용
     ```python
     Employee.set_raise_amount(1.2)
+
     print(Employee.raise_amount)  # Output: 1.2
     ```
     클래스 메서드로 객체 생성
     ```python
     employee = Employee.from_string("aijinsol-100")
+    
     print(employee.name)  # Output: aijinsol
     print(employee.salary)  # Output: 100
     ```
