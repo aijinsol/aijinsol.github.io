@@ -5,7 +5,7 @@ author: aijinsol
 date: 2024-02-08
 categories:
   - Algorithm
-  - Leetcode
+  - LeetCode
 tags:
   - recursive
   - dp
