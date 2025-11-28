@@ -62,4 +62,4 @@ docker-compose --version
 
 <br>
 
-![fig1](/assets/posts/2023-10-24-docker_compose_01.png){: .align-center}{: width="80%" height="80%"}
+![fig1](/statics/posts/etc/etc-02-fig2.png){: .align-center}{: width="100%" height="100%"}
