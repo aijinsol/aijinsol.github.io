@@ -21,7 +21,7 @@ tags:
 
 <br>
 
-# 1. ⚡️ Problem
+## ⚡ 1. Problem
 
 Given an integer array `nums` and an integer `target`,  
 return **the indices of the two numbers** such that they add up to `target`.
@@ -32,9 +32,9 @@ Two Sum 문제는 **반드시 하나의 정답이 존재**한다는 조건이 �
 
 <br>
 
-# 2. ⚡️ Approach
+## ⚡ 2. Approach
 
-## 1) Best Practice (Past-Oriented)
+### 1) Best Practice (Past-Oriented)
 
 - 새로운 숫자 `value`가 들어오면
   **"너의 짝(complement = target - value)이 과거에 있었니?"**
@@ -46,7 +46,7 @@ Two Sum 문제는 **반드시 하나의 정답이 존재**한다는 조건이 �
 
 <br>
 
-## 2) My First Attempt (Future-Oriented)
+### 2) My First Attempt (Future-Oriented)
  
 - 현재 숫자를 보고 **앞으로 필요한 숫자(complement)**를 key로 저장
 - 나중에 complement가 들어오면 정답을 찾는 방식
@@ -60,7 +60,7 @@ Two Sum에서는 동작하지만
 
 <br>
 
-# 3. ⚡ Code (Best Practice)
+## ⚡ 3. Code (Best Practice)
 
 ```python
 class Solution:
@@ -84,7 +84,7 @@ class Solution:
 
 <br>
 
-# 4. ⚡ Pitfalls
+## ⚡ 4. Pitfalls
 
 - Future-oriented 방식은 complement를 key로 저장해서 확장성 낮음
 - 이 문제는 정답 1개 보장, 그래서 "찾자마자 return" 패턴 성립
@@ -92,7 +92,7 @@ class Solution:
 
 <br>
 
-# 5. ⚡ Related Patterns
+## ⚡ 5. Related Patterns
 
 > TwoSum과 구조가 그대로 반복되는 문제들
 > (내부적으로 **complement lookup** 을 사용함)
@@ -106,7 +106,7 @@ class Solution:
 
 <br>
 
-# 6. ⚡ Conclusion
+## ⚡ 6. Conclusion
 
 - 앞으로 아래 유형이 나오면 → **TwoSum 패턴으로 접근!**
   - 배열에서 두 값/조건으로 특정 쌍 찾기
