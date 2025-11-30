@@ -37,11 +37,11 @@ Two Sum 문제는 **반드시 하나의 정답이 존재**한다는 조건이 �
 ### 1) Best Practice (Past-Oriented)
 
 - 새로운 숫자 `value`가 들어오면
-  **"너의 짝(complement = target - value)이 과거에 있었니?"**
-  → 있다면 바로 정답
+  **"너의 짝(complement = target - value)이 과거에 있었니?"**  
+  → 있다면 바로 정답  
   → 없다면 `index_map[value] = index` 로 기록
 
-📍 즉, **"지금까지 본 숫자 목록"을 dict에 관리하며 즉시 lookup하는 패턴**
+📍 즉, **"지금까지 본 숫자 목록"을 dict에 관리하며 즉시 lookup하는 패턴**  
 📍 중복⋅변형⋅확장 문제에서도 그대로 재사용 가능한 표준 패턴
 
 <br>
@@ -77,7 +77,7 @@ class Solution:
 <br>
 
 - Simulation
-  > **Input**: nums = [2,7,11,15], target = 9
+  > **Input**: nums = [2,7,11,15], target = 9  
   > **Output**: [0,1]
   - i=0 → val=2 → complement=7 없음 → `{2:0}`
   - i=1 → val=7 → complement=2 있음 → return `[0,1]`
@@ -97,10 +97,11 @@ class Solution:
 > TwoSum과 구조가 그대로 반복되는 문제들
 > (내부적으로 **complement lookup** 을 사용함)
 
-- [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) - 정렬된 배열 버전
-- [3Sum](https://leetcode.com/problems/3sum/description/) / [4Sum](https://leetcode.com/problems/4sum/description/) -내부 단계가 TwoSum
-- [Subarray Sum == K](https://leetcode.com/problems/subarray-sum-equals-k/description/) - `complement = prefix_sum - k`
-- [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) - value → index 기반 거리 체크
+- [[LeetCode: 167] Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) - 정렬된 배열 버전
+- [[LeetCode: 15] 3Sum](https://leetcode.com/problems/3sum/description/) - 내부 단계가 TwoSum
+- [[LeetCode: 18] 4Sum](https://leetcode.com/problems/4sum/description/) - 내부 단계가 TwoSum
+- [[LeetCode: 560] Subarray Sum == K](https://leetcode.com/problems/subarray-sum-equals-k/description/) - `complement = prefix_sum - k`
+- [[LeetCode: 219] Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) - value → index 기반 거리 체크
 
 📍 이런 문제 나오면 **"HashMap + complement lookup" 패턴을 가장 먼저 떠올릴 것!**
 
